@@ -1,0 +1,8 @@
+
+CREATE DATABASE loginsystem1
+
+CREATE TABLE users(idUser int(11) AUTO_INCREMENT primary key not null,
+	uidUser tinytext not null,
+	emailUsers tinytext not null,
+	pwdUsers longtext not null
+);
