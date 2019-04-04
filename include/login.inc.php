@@ -2,8 +2,9 @@
 if (isset ($_POST['login-submit']))
 {
   require 'dbh.inc.php';
-  $mailuid = $_POST['mailuid'];
-  $password = $_POST['pwd'];
+
+  $mailuid =htmlentities(mysqli_real_escape_string($conn,$_POST['mailuid'])) ;
+  $password =htmlentities(mysqli_real_escape_string($conn,$_POST['pwd'])) ;
 
   if (empty ($mailuid) || empty ($password))
   {
